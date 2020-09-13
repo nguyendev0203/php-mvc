@@ -38,36 +38,30 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-               
+
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="/home/">Home</a></li>
-                    
+                    <li class="active"><a href="/home/index">Home</a></li>
+
+
                 </ul>
-                
+
             </div>
         </div>
     </nav>
 
     <div class="container">
-        <div class="row">        
-            <?php
-            foreach ($data['products'] as $product) { ?>
-                <div class="col-sm-4">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading"><?=$product->name?></div>
-                        <div class="panel-body"><img src="app/views/images/<?=$product->thumbnail?>" class="img-responsive" style="width:100%" alt="Image"></div>
-                        <div class="panel-footer">Price: <?=number_format($product->price)?> vnđ</div>
-                    </div>
-                    
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading"><?= $data->name ?></div>
+                    <div class="panel-body"><img src="app/views/images/<?= $data->thumbnail ?>" class="img-responsive" style="width:100%" alt="Image"></div>
+                    <div class="panel-footer">Price: <?= $data->price ?>vnđ</div>
                 </div>
-               
-            <?php
-            }
-            ?>
-        </div><br>
-       
+            </div><br>
+
 
 </body>
 
